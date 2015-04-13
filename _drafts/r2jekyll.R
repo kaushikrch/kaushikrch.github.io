@@ -1,8 +1,7 @@
-#!C:\Program Files\R\R-3.1.3\bin\Rscript.exe
 library(knitr)
-
+setwd("~/kaushikrch.github.io/_drafts/")
 # Get the filename given as an argument in the shell.
-args = commandArgs(TRUE)
+args = "timing-readr.Rmd"
 filename = args[1]
 
 # Check that it's a .Rmd file.
