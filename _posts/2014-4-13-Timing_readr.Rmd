@@ -7,7 +7,6 @@ title: Timing readr v0.1.0
 Recently, [Hadley Wickham](http://had.co.nz/) announce the release of [code(readr) package v0.1.0](http://cran.r-project.org/web/packages/readr/) which claims to read tabular data into R in a fast and friendly manner having been written using [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html).
 
 ```{r chunk1, eval=TRUE, warning=FALSE, echo=TRUE}
-install.packages("readr")
+#install.packages("readr")
 library(readr)
-
 ```
