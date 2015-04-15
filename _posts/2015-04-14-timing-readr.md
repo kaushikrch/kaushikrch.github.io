@@ -2,6 +2,7 @@
 layout: post
 title: Timing readr v0.1.0
 category: r-project
+comments: true
 ---
 
 Recently, [Hadley Wickham](http://had.co.nz/) announced the release of [readr package v0.1.0](http://cran.r-project.org/web/packages/readr/). Having been written using [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html), this package claims to read tabular data into R in a fast and friendly manner. 
