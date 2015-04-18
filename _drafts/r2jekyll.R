@@ -2,7 +2,7 @@ library(knitr)
 
 setwd("~/kaushikrch.github.io/_drafts/")
 # Get the filename given as an argument in the shell.
-args = "timing-readr.Rmd"
+args = "benchmarking-file-imports.Rmd"
 filename = args[1]
 
 # Check that it's a .Rmd file.
