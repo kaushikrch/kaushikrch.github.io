@@ -1,12 +1,69 @@
 ---
 layout: post
-title: Timing readr v0.1.0
-category: r-project
+title: Benchmarking file imports
+category: R, r-project
 ---
 
-Recently, [Hadley Wickham](http://had.co.nz/) announced the release of [readr package v0.1.0](http://cran.r-project.org/web/packages/readr/). Having been written using [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html), this package claims to read tabular data into R in a fast and friendly manner. 
+Recently, [Hadley Wickham](http://had.co.nz/) announced the release of [readr](http://cran.r-project.org/web/packages/readr/) package v0.1.0. Having been written using [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html), this package claims to read tabular data into R in a fast and friendly manner. 
 
-```{r chunk1, eval=TRUE, warning=FALSE, echo=TRUE}
-#install.packages("readr")
-library(readr)
+I decided to benchmark `read_csv()` from the readr package for a large csv file with base `read.csv()` function and `fread()` from the [data.table](http://cran.r-project.org/web/packages/data.table/) package, which is written in C. 
+
+I use the `flights` data from [nycflights13](http://cran.r-project.org/web/packages/nycflights13/) package.
+
+```{r data, eval=TRUE, warning=FALSE, echo=TRUE, comments = ""}
+library(nycflights13)
+write.csv(flights, "flights.csv")
 ```
+
+The *flights.csv* file gets extracted as a 25.5MB CSV file on my Windows machine. 
+
+```{r benchmark, eval=TRUE, warning=FALSE, echo=TRUE}
+library(rbenchmark)
+library(data.table); library(readr)
+
+## Read using read.csv() function from base
+read.base <- function(x){
+  read.csv("flights.csv")
+}
+
+## Read using read_csv() function from readr
+read.readr <- function(x){
+  read_csv("flights.csv")
+}
+
+## Read using fread() function from data.table
+read.DT <- function(x){
+  read_csv("flights.csv")
+}
+
+benchmark(
+  read.base(),
+  read.readr(),
+  read.DT(),
+  replications = 10
+  )
+```
+
+Both `fread()` and `read_csv()` provides us with significant improvement in timings.
+
+Let's tweak the `read.csv()` function to read the all the columns as characters (which supposedly improves performance).
+
+```{r benchmark2, eval=TRUE, warning=FALSE, echo=TRUE}
+
+## Read using read.csv() function from base
+read.base2 <- function(x){
+  read.csv("flights.csv", colClasses = "character")
+}
+
+benchmark(
+  read.base(),
+  read.base2(),
+  read.readr(),
+  read.DT(),
+  replications = 10
+  )
+```
+
+Though the performance of `read.csv()` functions improves, it does not even come closer to that of function from readr or data.table packages.
+
+Thanks, Hadley Wickham, Romain Francois for readr; Matt Dowle et.al. for data.table. Now I can read my data much more quickly and efficiently.
