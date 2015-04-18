@@ -58,7 +58,7 @@ benchmark(
 ## 2        NA
 ```
 
-Both `fread()` and `read_csv()` provides us with significant improvement in timings.
+Both `fread()` and `read_csv()` provide us with significant improvement in timings.
 
 Let's tweak the `read.csv()` function to read the all the columns as characters (which supposedly improves performance).
 
