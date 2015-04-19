@@ -3,6 +3,9 @@ layout: post
 title: Benchmarking file imports
 category: R, r-project
 comments: true
+tags:
+  -R
+  -r-project
 ---
 
 Recently, [Hadley Wickham](http://had.co.nz/) announced the release of [readr](http://cran.r-project.org/web/packages/readr/) package v0.1.0. Having been written using [Rcpp](http://dirk.eddelbuettel.com/code/rcpp.html), this package claims to read tabular data into R in a fast and friendly manner. 
