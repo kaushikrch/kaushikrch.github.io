@@ -13,13 +13,13 @@ In my first series of blogs, we will learn about ways to import, manage, visuali
 
 If we have a sample fwf file containg the following three rows of data and the layout as given below:
 
- <img src="sample_fwf.png" style="height: 600px; width:400px" />
+<img src="sample_fwf.png" style="height:600px; width:400px" />
 
-|Variable Name | Column Start  | Column End   |
-|------------- | ------------- | -------------|
-|Serial Number | 1             | 2            |
-|Monthly Income| 3             | 6            |
-|Address       | 7             | 36           |
+| Variable Name | Column Start  | Column End   |
+| ------------- | ------------- | -------------|
+| Serial Number | 1             | 2            |
+| MonthlyIncome | 3             | 6            |
+| Address       | 7             | 36           |
 
 We can import this file using the following R commands.
 
@@ -40,7 +40,7 @@ sample # print the sample file
 A possible way out to save you from the manual labor of typing out the column names and corresponding widths of large NSS data is to prepare a cleaner version of the layout file which can be imported using R. The clean layout file (screen-shot provided below) should contain the item description, byte length of the item, a short item description to be provided as column names and corresponding column classes as well, if needed.
 
 
- <img src="layout_clean.png" height="800px" width="600px" />
+<img src="layout_clean.png" height="800px" width="600px" />
 
 This layout refers to Level 1 data of NSSO 66th Round Schedule 1.0 Consumer Expenditure Survey. The data distributed for this round has been arranged for different levels (there are 10 levels). Each block of the questionnare is linked to a level (multiple blocks can be part of the same level).
 
