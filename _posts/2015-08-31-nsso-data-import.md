@@ -13,13 +13,13 @@ In my first series of blogs, we will learn about ways to import, manage, visuali
 
 If we have a sample fwf file containg the following three rows of data and the layout as given below:
 
- <img src="sample_fwf.png" height="600px" width="400px" />
+ <img src="sample_fwf.png" style="height: 600px; width:400px" />
 
-Variable Name | Column Start  | Column End
-------------- | ------------- | -------------
-Serial Number | 1             | 2
-Monthly Income| 3             | 6
-Address       | 7             | 36
+|Variable Name | Column Start  | Column End   |
+|------------- | ------------- | -------------|
+|Serial Number | 1             | 2            |
+|Monthly Income| 3             | 6            |
+|Address       | 7             | 36           |
 
 We can import this file using the following R commands.
 
