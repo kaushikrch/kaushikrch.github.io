@@ -1,0 +1,23 @@
+---
+title: "Beginners' Guide to Random Forests - Part I: Bootstrapping"
+author: "Kaushik Roy Chowdhury"
+output: html_document
+---
+
+> "It's all right to tell a man to lift himself by his own bootstraps, but it is cruel jest to say to a bootless man that he ought to lift himself by his own bootstraps."
+>
+>--<cite>Martin Luther King Jr.</cite>
+
+This post is the first part of 
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
