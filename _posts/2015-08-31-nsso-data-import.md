@@ -13,7 +13,7 @@ In my first series of blogs, we will learn about ways to import, manage, visuali
 
 If we have a sample fwf file containg the following three rows of data and the layout as given below:
 
-<img src="sample_fwf.png" height = "600" width = "400" />
+<img src="sample_fwf.png" height = "400" width = "400" />
 
 
 VariableName | ColumnStart | ColumnEnd     
