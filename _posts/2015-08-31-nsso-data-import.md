@@ -38,8 +38,7 @@ sample # print the sample file
 
 A possible way out to save you from the manual labor of typing out the column names and corresponding widths of large NSS data is to prepare a cleaner version of the layout file which can be imported using R. The clean layout file (screen-shot provided below) should contain the item description, byte length of the item, a short item description to be provided as column names and corresponding column classes as well, if needed.
 
-
-<img src="layout_clean.png" height="800px" width="600px" />
+![Cleaned Layout File](/images/layout_clean.png)
 
 This layout refers to Level 1 data of NSSO 66th Round Schedule 1.0 Consumer Expenditure Survey. The data distributed for this round has been arranged for different levels (there are 10 levels). Each block of the questionnare is linked to a level (multiple blocks can be part of the same level).
 
