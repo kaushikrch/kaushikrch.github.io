@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Reading National Sample Survey Data using R"
+title: "NSSO Series I: Reading National Sample Survey Data using R"
 category: R, r-project
 comments: true
 ---
