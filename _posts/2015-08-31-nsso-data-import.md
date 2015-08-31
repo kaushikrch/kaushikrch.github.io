@@ -15,11 +15,11 @@ If we have a sample fwf file containg the following three rows of data and the l
 
 ![Sample fixed-width format file](/images/sample_fwf.png)
 
-VariableName | ColumnStart | ColumnEnd     
---- | --- | ---
-Serial Number | 1 | 2             
-MonthlyIncome | 3 | 6             
-Address       | 7 | 36  
+| VariableName | ColumnStart | ColumnEnd | 
+| --- | --- | --- |
+| Serial Number | 1 | 2 |             
+| MonthlyIncome | 3 | 6 |             
+| Address       | 7 | 36 |  
 
 We can import this file using the following R commands.
 
