@@ -18,26 +18,26 @@ If we have a sample fwf file containg the following three rows of data and the l
 <table>
 <thead>
 <tr class="header">
-<th align="left">Variable Name</th>
-<th align="left">Column Start</th>
-<th align="left">Column End</th>
+<th align="left">VariableName</th>
+<th align="left">ColumnStart</th>
+<th align="left">ColumnEnd</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Serial Number</td>
-<td align="left">1</td>
-<td align="left">2</td>
+<td align="left">SerialNumber</td>
+<td align="center">1</td>
+<td align="center">2</td>
 </tr>
 <tr class="even">
-<td align="left">Monthly Income</td>
-<td align="left">3</td>
-<td align="left">6</td>
+<td align="left">MonthlyIncome</td>
+<td align="center">3</td>
+<td align="center">6</td>
 </tr>
 <tr class="odd">
 <td align="left">Address</td>
-<td align="left">7</td>
-<td align="left">36</td>
+<td align="center">7</td>
+<td align="center">36</td>
 </tr>
 </tbody>
 </table>
