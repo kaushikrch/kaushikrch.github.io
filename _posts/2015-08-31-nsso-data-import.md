@@ -15,13 +15,32 @@ If we have a sample fwf file containg the following three rows of data and the l
 
 ![Sample fixed-width format file](/images/sample_fwf.png)
 
-
-
-| VariableName | ColumnStart | ColumnEnd | 
-| --- | --- | --- |
-| Serial Number | 1 | 2 |             
-| MonthlyIncome | 3 | 6 |             
-| Address       | 7 | 36 |  
+<table>
+<thead>
+<tr class="header">
+<th align="left">Variable Name</th>
+<th align="left">Column Start</th>
+<th align="left">Column End</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Serial Number</td>
+<td align="left">1</td>
+<td align="left">2</td>
+</tr>
+<tr class="even">
+<td align="left">Monthly Income</td>
+<td align="left">3</td>
+<td align="left">6</td>
+</tr>
+<tr class="odd">
+<td align="left">Address</td>
+<td align="left">7</td>
+<td align="left">36</td>
+</tr>
+</tbody>
+</table>
 
 We can import this file using the following R commands.
 
